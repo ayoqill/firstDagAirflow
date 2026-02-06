@@ -37,4 +37,12 @@ Why this helps you learn:
 - You practice debugging from logs when a task fails.
 - You learn how schedules create automatic runs.
 
-If you want, I can help you turn `my_dag` into that ETL example next.
+<img width="1906" height="992" alt="task instances" src="https://github.com/user-attachments/assets/abb5c3f7-8120-4d01-865b-0db9c1745554" />
+
+<img width="1918" height="811" alt="my_dag" src="https://github.com/user-attachments/assets/a162a2da-32d4-46d1-bfee-b96d196980df" />
+
+<img width="1917" height="871" alt="DAG showed graph" src="https://github.com/user-attachments/assets/97adeeb6-3e7c-4b79-88e4-47ad4139f397" />
+
+
+
+
