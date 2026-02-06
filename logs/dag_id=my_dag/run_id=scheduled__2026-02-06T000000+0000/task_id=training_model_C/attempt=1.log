@@ -1,0 +1,22 @@
+{"timestamp":"2026-02-06T12:02:29.928389Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-06T12:02:29.940877Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/my_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-06T12:02:30.252983Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.253754Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.254142Z","level":"info","event":"Current task name:training_model_C","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.254456Z","level":"info","event":"Dag name:my_dag","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.264624Z","level":"info","event":"Training model C...","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.265489Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-02-06T12:02:30.336347Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.345198Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-06T12:02:30.346074Z","level":"info","event":"Task operator:<Task(PythonOperator): training_model_C>","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:16.124802Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-06T14:06:16.137470Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/my_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-06T14:06:16.928730Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:16.930423Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:16.933773Z","level":"info","event":"Current task name:training_model_C","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:16.934598Z","level":"info","event":"Dag name:my_dag","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:16.962010Z","level":"info","event":"Done. Returned value was: 7","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-02-06T14:06:16.964407Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019c3346-3f55-7d40-97e5-b4b0d90d1756'), task_id='training_model_C', dag_id='my_dag', run_id='scheduled__2026-02-06T00:00:00+00:00', try_number=1, dag_version_id=UUID('019c3344-f3f0-789e-81be-89b0c0649eba'), map_index=-1, hostname='cd692682eb9e', context_carrier={}, task=<Task(PythonOperator): training_model_C>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2026, 2, 6, 14, 6, 9, 559495, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1522}
+{"timestamp":"2026-02-06T14:06:17.397817Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:17.400820Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-06T14:06:17.402264Z","level":"info","event":"Task operator:<Task(PythonOperator): training_model_C>","logger":"task.stdout"}
