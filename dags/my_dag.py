@@ -7,7 +7,20 @@ from random import randint
 
 def _choose_best_model(ti):
     accuracies = ti.xcom_pull(task_ids=['training_model_A', 'training_model_B', 'training_model_C'])
+    print(f"Model A accuracy: {accuracies[0]}")
+    print(f"Model B accuracy: {accuracies[1]}")
+    print(f"Model C accuracy: {accuracies[2]}")
+    
     best_accuracy = max(accuracies)
+    best_model_index = accuracies.index(best_accuracy)
+    best_model = ['A', 'B', 'C'][best_model_index]
+    
+    print(f"Best model: Model {best_model} with accuracy {best_accuracy}")
+    
+    # Push the best model info to XCom
+    ti.xcom_push(key='best_model', value=best_model)
+    ti.xcom_push(key='best_accuracy', value=best_accuracy)
+    
     if(best_accuracy > 8):
         return 'accurate'
     return 'inaccurate'
@@ -46,12 +59,12 @@ with DAG(
 
     accurate = BashOperator(
         task_id='accurate',
-        bash_command='echo "The best model is accurate!"'
+        bash_command='echo "Model {{ ti.xcom_pull(task_ids=\'choose_best_model\', key=\'best_model\') }} won with accuracy {{ ti.xcom_pull(task_ids=\'choose_best_model\', key=\'best_accuracy\') }} - ACCURATE!"'
     )
 
     inaccurate = BashOperator(
         task_id='inaccurate',
-        bash_command='echo "The best model is not accurate."'
+        bash_command='echo "Model {{ ti.xcom_pull(task_ids=\'choose_best_model\', key=\'best_model\') }} won with accuracy {{ ti.xcom_pull(task_ids=\'choose_best_model\', key=\'best_accuracy\') }} - NOT ACCURATE."'
     )
 
     # Set task dependencies
