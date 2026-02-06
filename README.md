@@ -85,12 +85,15 @@ What to try next:
 - Add a task that writes output to a file and another task that reads it.
 - Change the schedule and observe how runs appear in the UI.
 
+<img width="1577" height="895" alt="docker setup" src="https://github.com/user-attachments/assets/17593706-0121-4d9e-a75b-35837a77b7dc" />
 
 <img width="1906" height="992" alt="task instances" src="https://github.com/user-attachments/assets/abb5c3f7-8120-4d01-865b-0db9c1745554" />
 
 <img width="1918" height="811" alt="my_dag" src="https://github.com/user-attachments/assets/a162a2da-32d4-46d1-bfee-b96d196980df" />
 
+<img width="1918" height="933" alt="graph view" src="https://github.com/user-attachments/assets/a15d9838-9db3-4dda-96cd-9ca6adef850e" />
 
+<img width="1918" height="850" alt="OUTPUT" src="https://github.com/user-attachments/assets/5d7726cf-1f95-48f9-bdc3-4097654084a4" />
 
 
 
